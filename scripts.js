@@ -1,21 +1,27 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Funkce pro přidání vybraných filtrů do bublin
-    document.querySelectorAll('select[multiple]').forEach(function(select) {
-        select.addEventListener('change', function() {
-            const selectedOptions = Array.from(this.selectedOptions).map(option => option.value);
-            updateSelectedFilters(selectedOptions);
-        });
+function toggleDropdown(id) {
+    let dropdown = document.getElementById(id);
+    dropdown.classList.toggle("hidden");
+}
+
+document.querySelectorAll(".dropdown input").forEach(input => {
+    input.addEventListener("change", function () {
+        let selectedFilters = document.getElementById("selected-filters");
+        let filterText = this.value;
+        
+        if (this.checked) {
+            let filterBubble = document.createElement("span");
+            filterBubble.className = "filter-bubble";
+            filterBubble.innerText = filterText;
+            filterBubble.dataset.value = filterText;
+
+            filterBubble.addEventListener("click", function () {
+                document.querySelector(`input[value="${this.dataset.value}"]`).checked = false;
+                this.remove();
+            });
+
+            selectedFilters.appendChild(filterBubble);
+        } else {
+            document.querySelector(`.filter-bubble[data-value="${filterText}"]`)?.remove();
+        }
     });
-
-    function updateSelectedFilters(selectedOptions) {
-        const selectedFiltersContainer = document.getElementById('selected-filters');
-        selectedFiltersContainer.innerHTML = ''; // Vymaž předchozí bubliny
-
-        selectedOptions.forEach(option => {
-            const bubble = document.createElement('div');
-            bubble.classList.add('bubble');
-            bubble.textContent = option;
-            selectedFiltersContainer.appendChild(bubble);
-        });
-    }
 });
