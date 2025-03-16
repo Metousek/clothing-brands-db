@@ -15,30 +15,40 @@
             <div class="filter">
                 <button class="filter-btn" onclick="toggleDropdown('country-dropdown')">Country</button>
                 <div id="country-dropdown" class="dropdown">
-                    <label><input type="checkbox" value="USA"> 🇺🇸 USA</label>
-                    <label><input type="checkbox" value="Spain"> 🇪🇸 Spain</label>
-                    <label><input type="checkbox" value="UK"> 🇬🇧 UK</label>
-                    <label><input type="checkbox" value="Italy"> 🇮🇹 Italy</label>
+                    <label onclick="selectOption(this, 'country')">🇺🇸 USA</label>
+                    <label onclick="selectOption(this, 'country')">🇪🇸 Spain</label>
+                    <label onclick="selectOption(this, 'country')">🇬🇧 UK</label>
+                    <label onclick="selectOption(this, 'country')">🇮🇹 Italy</label>
                 </div>
             </div>
             
             <div class="filter">
                 <button class="filter-btn" onclick="toggleDropdown('price-dropdown')">Price range</button>
                 <div id="price-dropdown" class="dropdown">
-                    <label><input type="checkbox" value="$"> $</label>
-                    <label><input type="checkbox" value="$$"> $$</label>
-                    <label><input type="checkbox" value="$$$"> $$$</label>
-                    <label><input type="checkbox" value="$$$$"> $$$$</label>
+                    <label onclick="selectOption(this, 'price')">$</label>
+                    <label onclick="selectOption(this, 'price')">$$</label>
+                    <label onclick="selectOption(this, 'price')">$$$</label>
+                    <label onclick="selectOption(this, 'price')">$$$$</label>
                 </div>
             </div>
             
             <div class="filter">
                 <button class="filter-btn" onclick="toggleDropdown('category-dropdown')">Clothing category</button>
                 <div id="category-dropdown" class="dropdown">
-                    <label><input type="checkbox" value="Outerwear"> Outerwear</label>
-                    <label><input type="checkbox" value="Jeans"> Jeans</label>
-                    <label><input type="checkbox" value="T-shirts"> T-shirts</label>
-                    <label><input type="checkbox" value="Accessories"> Accessories</label>
+                    <label onclick="selectOption(this, 'category')">Outerwear</label>
+                    <label onclick="selectOption(this, 'category')">Jeans</label>
+                    <label onclick="selectOption(this, 'category')">T-shirts</label>
+                    <label onclick="selectOption(this, 'category')">Accessories</label>
+                </div>
+            </div>
+            
+            <div class="filter">
+                <button class="filter-btn" onclick="toggleDropdown('materials-dropdown')">Materials</button>
+                <div id="materials-dropdown" class="dropdown">
+                    <label onclick="selectOption(this, 'materials')">Denim</label>
+                    <label onclick="selectOption(this, 'materials')">Canvas</label>
+                    <label onclick="selectOption(this, 'materials')">Leather</label>
+                    <label onclick="selectOption(this, 'materials')">Wool</label>
                 </div>
             </div>
         </div>
@@ -49,3 +59,4 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
