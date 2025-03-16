@@ -3,79 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing Brands DB</title>
+    <title>Quality Clothing Database</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Clothing Brands Database</h1>
-        </header>
+        <h1>Quality clothing database</h1>
+        <input type="text" placeholder="Type something..." class="search-bar">
         
-        <!-- Pokročilý výběr filtrů -->
-        <section class="filters">
-            <h2>Advanced Filters</h2>
+        <div class="filters">
             <div class="filter">
-                <label for="countries">Select Country:</label>
-                <div class="dropdown" id="countries">
-                    <select multiple>
-                        <option value="USA">🇺🇸 USA</option>
-                        <option value="Spain">🇪🇸 Spain</option>
-                        <option value="UK">🇬🇧 UK</option>
-                        <option value="Italy">🇮🇹 Italy</option>
-                    </select>
+                <button class="filter-btn" onclick="toggleDropdown('country-dropdown')">Country</button>
+                <div id="country-dropdown" class="dropdown">
+                    <label><input type="checkbox" value="USA"> 🇺🇸 USA</label>
+                    <label><input type="checkbox" value="Spain"> 🇪🇸 Spain</label>
+                    <label><input type="checkbox" value="UK"> 🇬🇧 UK</label>
+                    <label><input type="checkbox" value="Italy"> 🇮🇹 Italy</label>
                 </div>
             </div>
-
+            
             <div class="filter">
-                <label for="price-range">Select Price Range:</label>
-                <div class="dropdown" id="price-range">
-                    <select multiple>
-                        <option value="$">$</option>
-                        <option value="$$">$$</option>
-                        <option value="$$$">$$$</option>
-                        <option value="$$$$">$$$$</option>
-                    </select>
+                <button class="filter-btn" onclick="toggleDropdown('price-dropdown')">Price range</button>
+                <div id="price-dropdown" class="dropdown">
+                    <label><input type="checkbox" value="$"> $</label>
+                    <label><input type="checkbox" value="$$"> $$</label>
+                    <label><input type="checkbox" value="$$$"> $$$</label>
+                    <label><input type="checkbox" value="$$$$"> $$$$</label>
                 </div>
             </div>
-
+            
             <div class="filter">
-                <label for="clothing-category">Select Clothing Category:</label>
-                <div class="dropdown" id="clothing-category">
-                    <select multiple>
-                        <option value="outerwear">Outerwear</option>
-                        <option value="jeans">Jeans</option>
-                        <option value="tshirts">T-shirts</option>
-                        <option value="accessories">Accessories</option>
-                    </select>
+                <button class="filter-btn" onclick="toggleDropdown('category-dropdown')">Clothing category</button>
+                <div id="category-dropdown" class="dropdown">
+                    <label><input type="checkbox" value="Outerwear"> Outerwear</label>
+                    <label><input type="checkbox" value="Jeans"> Jeans</label>
+                    <label><input type="checkbox" value="T-shirts"> T-shirts</label>
+                    <label><input type="checkbox" value="Accessories"> Accessories</label>
                 </div>
             </div>
+        </div>
 
-            <div class="filter">
-                <label for="materials">Select Material:</label>
-                <div class="dropdown" id="materials">
-                    <select multiple>
-                        <option value="denim">Denim</option>
-                        <option value="canvas">Canvas</option>
-                        <option value="leather">Leather</option>
-                    </select>
-                </div>
-            </div>
-        </section>
-
-        <!-- Zobrazení vybraných filtrů jako bubliny -->
-        <section class="selected-filters">
-            <h2>Selected Filters</h2>
-            <div id="selected-filters">
-                <!-- Sem se budou přidávat bubliny -->
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2025 Clothing Brands DB</p>
-        </footer>
+        <div class="selected-filters" id="selected-filters"></div>
     </div>
-
+    
     <script src="scripts.js"></script>
 </body>
 </html>
