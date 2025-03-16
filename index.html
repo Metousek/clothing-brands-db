@@ -1,9 +1,76 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing Brands DB</title>
-  </head>
-  <body>
-    <h1>Coming Soon</h1>
-  </body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Clothing Brands Database</h1>
+        </header>
+        
+        <!-- Pokročilý výběr filtrů -->
+        <section class="filters">
+            <h2>Advanced Filters</h2>
+            <div class="filter">
+                <label for="countries">Select Country:</label>
+                <select id="countries" multiple>
+                    <option value="USA">🇺🇸 USA</option>
+                    <option value="Spain">🇪🇸 Spain</option>
+                    <option value="UK">🇬🇧 UK</option>
+                    <option value="Italy">🇮🇹 Italy</option>
+                    <!-- Další země podle potřeby -->
+                </select>
+            </div>
+
+            <div class="filter">
+                <label for="price-range">Select Price Range:</label>
+                <select id="price-range" multiple>
+                    <option value="$">$</option>
+                    <option value="$$">$$</option>
+                    <option value="$$$">$$$</option>
+                    <option value="$$$$">$$$$</option>
+                </select>
+            </div>
+
+            <div class="filter">
+                <label for="clothing-category">Select Clothing Category:</label>
+                <select id="clothing-category" multiple>
+                    <option value="outerwear">Outerwear</option>
+                    <option value="jeans">Jeans</option>
+                    <option value="tshirts">T-shirts</option>
+                    <option value="accessories">Accessories</option>
+                    <!-- Další kategorie podle potřeby -->
+                </select>
+            </div>
+
+            <div class="filter">
+                <label for="materials">Select Material:</label>
+                <select id="materials" multiple>
+                    <option value="denim">Denim</option>
+                    <option value="canvas">Canvas</option>
+                    <option value="leather">Leather</option>
+                    <!-- Další materiály podle potřeby -->
+                </select>
+            </div>
+        </section>
+
+        <!-- Zobrazení vybraných filtrů jako bubliny -->
+        <section class="selected-filters">
+            <h2>Selected Filters</h2>
+            <div id="selected-filters">
+                <!-- Sem se budou přidávat bubliny -->
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Clothing Brands DB</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
 </html>

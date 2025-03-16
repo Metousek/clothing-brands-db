@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.filters {
+    margin-top: 30px;
+}
+
+.filter {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.2em;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    background-color: black;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.selected-filters {
+    margin-top: 40px;
+}
+
+#selected-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bubble {
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 1em;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
