@@ -1,49 +1,77 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
+    background-color: #000;
+    color: #fff;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 header {
     text-align: center;
-    margin-top: 50px;
-}
-
-h1 {
-    font-size: 2.5em;
 }
 
 .filters {
-    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .filter {
+    width: 22%;
     margin-bottom: 20px;
 }
 
-label {
-    font-size: 1.2em;
+.filter label {
+    display: block;
+    margin-bottom: 8px;
 }
 
-select {
+.select {
     width: 100%;
-    padding: 10px;
-    font-size: 1.1em;
-    background-color: black;
-    color: white;
-    border: 1px solid gray;
-    border-radius: 5px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
 }
 
+/* Dropdown animation */
+.dropdown select {
+    display: none;
+    width: 100%;
+    padding: 8px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.dropdown:hover select {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+/* Animation for dropdown */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bubliny pro vybrané filtry */
 .selected-filters {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 #selected-filters {
@@ -53,14 +81,8 @@ select {
 }
 
 .bubble {
-    background-color: #444;
-    padding: 10px 20px;
+    background-color: #555;
+    padding: 5px 10px;
     border-radius: 15px;
-    display: inline-block;
-    font-size: 1em;
-}
-
-footer {
-    text-align: center;
-    margin-top: 50px;
+    font-size: 14px;
 }
